@@ -13,7 +13,10 @@ values (1, 'Alice', 'Brown', 17, 'A'),
 (4, 'David', 'Williams', 20, 'A'),
 (5, 'Eve', 'Jones', 18, 'B');
 
--- simple case expression
+-------------------------------------------------------------------------------------------------------------------------------
+
+-- 1) Simple case expression
+
 select first_name, last_name, grade,
     case grade
         when 'A' then 'Excellent'
@@ -23,7 +26,10 @@ select first_name, last_name, grade,
     end as GradeDescription
 from students;
 
--- searched case expression
+-------------------------------------------------------------------------------------------------------------------------------
+
+-- 2) Searched case expression
+
 select first_name, last_name, age,
     case
         when age between 10 and 14 then 'Junior High'
@@ -33,7 +39,10 @@ select first_name, last_name, age,
     end as education_level
 from students;
 
--- multiple case expression
+-------------------------------------------------------------------------------------------------------------------------------
+
+-- 3) Multiple case expression
+
 select first_name, last_name, age, grade,
     case
         when age < 18 then 'minor'
@@ -46,3 +55,5 @@ select first_name, last_name, age, grade,
         else 'Unknown'
     end as grade_description
 from students;
+
+-------------------------------------------------------------------------------------------------------------------------------
