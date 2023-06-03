@@ -15,7 +15,7 @@ select * from employees;
 
 -------------------------------------------------------------------------------------------------------------------------------
 
--- 1) Update null values with default values
+-- 1) update null values with default values
 
 -- setting a default value for null age values
 update employees
